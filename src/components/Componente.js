@@ -5,7 +5,7 @@ const Componente = () => {
 }
 
 const NuevoComponente = (props) => {
-    const jsx = <h1>Bienvenido: {props.lastName} {props.name}</h1>;
+    const jsx = <h1>Bienvenido: {props.name} {props.lastName}</h1>;
     return jsx;
 }
 

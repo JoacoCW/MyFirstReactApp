@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Componente from './components/Componente';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ItemListContainer />
       <Componente />
     </div>
   );
