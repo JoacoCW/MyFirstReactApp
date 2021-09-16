@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
+import CartWidget from './CartWidget';
 
 function NavBar() {
     return (
@@ -23,6 +24,7 @@ function NavBar() {
                 </li>
             </ul>
             </div>
+            <CartWidget />
         </div>
     </nav>
     );

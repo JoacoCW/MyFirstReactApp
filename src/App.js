@@ -1,7 +1,9 @@
+import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Componente from './components/Componente';
 import NavBar from './components/NavBar';
+
 
 function App() {
   return (
@@ -25,5 +27,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

@@ -1,16 +1,12 @@
 import React from 'react';
 
-function Componente() {
-    const miPrimerJsx = (
-        <p>
-            Mi primer componente de prueba
-        </p>
-    )
-    return (
-    <div>
-        { miPrimerJsx }
-    </div>
-    );
+const Componente = () => {
+    return <NuevoComponente name='Joaquín' lastName='Weiss' />
+}
+
+const NuevoComponente = (props) => {
+    const jsx = <h1>Bienvenido: {props.lastName} {props.name}</h1>;
+    return jsx;
 }
 
 export default Componente;
