@@ -3,7 +3,7 @@ import React from 'react'
 const CartWidget = () => {
     return (
         <p>
-            <i class="bi bi-cart2" style={{ fontSize: 50, color: "white"}}></i>
+            <i class="bi bi-cart2 mh-100 text-white"></i>
         </p>
     )
 }
