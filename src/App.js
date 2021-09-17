@@ -1,6 +1,7 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap';
 import Componente from './components/Componente';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -25,8 +26,8 @@ function App() {
         </a>
       </header>
       <ItemListContainer />
-      <Componente texto="blabla" numero={1}/>
-      <Componente texto="blabla" numero={0}/>
+      <Componente texto="Tu carro" numero={1}/>
+      <Componente texto="Tu carro" numero={0}/>
     </div>
   );
 }

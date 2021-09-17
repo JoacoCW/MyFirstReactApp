@@ -1,33 +1,33 @@
-import React from 'react';
+import React from 'react'
+import {Navbar,Container,Nav, NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
-import CartWidget from './CartWidget';
+import CartWidget from './CartWidget'
 
-function NavBar() {
+const NavBarReact = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-            <a className="navbar-brand" href="#">Bookstore</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul className="navbar-nav">
-                <li className="nav-item mx-5">
-                <a className="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li className="nav-item mx-5">
-                <a className="nav-link" href="#">Categorías</a>
-                </li>
-                <li className="nav-item mx-5">
-                <a className="nav-link" href="#">Más vendidos</a>
-                </li>
-            </ul>
-            </div>
-            <CartWidget number={3}/>
+        <div>
+            <Navbar bg="dark" variant="dark" expand="lg">
+                <Container>
+                    <Navbar.Brand href="#home">Bookstore</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link className="mx-5" href="#home">Inicio</Nav.Link>
+                        <Nav.Link className="mx-5" href="#link">Más vendidos</Nav.Link>
+                        <NavDropdown className="mx-5" title="Categorías" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">Novelas</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Ensayos</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Biografías</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.4">Categorías</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <CartWidget number={3}/>
+                    </Navbar.Collapse>
+                </Container>
+                </Navbar>
         </div>
-    </nav>
-    );
+    )
 }
 
-export default NavBar;
+export default NavBarReact
