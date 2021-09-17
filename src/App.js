@@ -25,7 +25,8 @@ function App() {
         </a>
       </header>
       <ItemListContainer />
-      <Componente />
+      <Componente texto="blabla" numero={1}/>
+      <Componente texto="blabla" numero={0}/>
     </div>
   );
 }

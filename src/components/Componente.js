@@ -1,12 +1,17 @@
 import React from 'react';
 
-const Componente = () => {
-    return <NuevoComponente name='Joaquín' lastName='Weiss' />
-}
-
-const NuevoComponente = (props) => {
-    const jsx = <h1>Bienvenido: {props.name} {props.lastName}</h1>;
-    return jsx;
+const Componente = (props) => {
+    const {texto, numero} = props;
+    return (
+        numero<1 ?
+        <>
+            <h1>Tu carro está vacío</h1>
+        </>
+        :
+        <>
+        <h1>Tu carro tiene elementos</h1>
+        </>
+    )
 }
 
 export default Componente;
