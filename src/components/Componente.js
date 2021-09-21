@@ -8,11 +8,11 @@ const Componente = (props) => {
     return (
         numero<1 ?
         <>
-            <h1 className="lead" >{texto} está vacío</h1>
+            <h1 className="lead">{texto} está vacío</h1>
         </>
         :
         <>
-        <h1 className=" btn btn-warning">{texto} tiene elementos</h1>
+        <h1 className="btn btn-warning">{texto} tiene elementos</h1>
         </>
     )
 }
