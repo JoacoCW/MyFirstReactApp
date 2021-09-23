@@ -3,14 +3,14 @@ import ItemCount from './ItemCount'
 import { Card } from 'react-bootstrap';
 
 const Item = (props) => {
-    const {product, cost, pic, stock} = props;
+    const {title, author, cost, pictureUrl, stock} = props;
 
     return (
         <div>
-            <Card className="text-center">
-                <Card.Header>{product}</Card.Header>
+            <Card className="text-center my-2">
+                <Card.Header>{title} - {author}</Card.Header>
                 <Card.Body>
-                    <Card.Img variant="top" src={pic} alt={product} />
+                    <Card.Img variant="top" src={pictureUrl} alt={title} />
                     <Card.Title>Special title treatment</Card.Title>
                     <Card.Text>
                     $ {cost}
