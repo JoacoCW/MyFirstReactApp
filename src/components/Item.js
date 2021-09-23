@@ -1,15 +1,24 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { Card } from 'react-bootstrap';
 
 const Item = (props) => {
-    const {product, cost, pic} = props;
+    const {product, cost, pic, stock} = props;
 
     return (
         <div>
-            <h2>{product}</h2>
-            <h4>$ {cost}</h4>
-            <img src={pic} alt=''/>
-            <ItemCount stock={10} initial={0}/>
+            <Card className="text-center">
+                <Card.Header>{product}</Card.Header>
+                <Card.Body>
+                    <Card.Img variant="top" src={pic} alt={product} />
+                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Text>
+                    $ {cost}
+                    </Card.Text>
+                    <ItemCount stock={stock} initial={0}/>
+                </Card.Body>
+                <Card.Footer className="text-muted">Stock: {stock}</Card.Footer>
+            </Card>           
         </div>
     )
 }
