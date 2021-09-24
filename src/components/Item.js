@@ -2,22 +2,19 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import { Card } from 'react-bootstrap';
 
-const Item = (props) => {
-    const {title, author, cost, pictureUrl, stock} = props;
+const Item = ({product}) =>{
 
     return (
         <div>
             <Card className="text-center my-2">
-                <Card.Header>{title} - {author}</Card.Header>
+                <Card.Header>{product.title} - {product.author}</Card.Header>
                 <Card.Body>
-                    <Card.Img variant="top" src={pictureUrl} alt={title} />
+                    <Card.Img className="w-25" variant="top" src={product.pictureUrl} alt={product.title} />
                     <Card.Title>Special title treatment</Card.Title>
-                    <Card.Text>
-                    $ {cost}
-                    </Card.Text>
-                    <ItemCount stock={stock} initial={0}/>
+                    <Card.Text>$ {product.cost}</Card.Text>
+                    <ItemCount stock={product.stock} initial={0}/>
                 </Card.Body>
-                <Card.Footer className="text-muted">Stock: {stock}</Card.Footer>
+                <Card.Footer className="text-muted">Stock: {product.stock}</Card.Footer>
             </Card>           
         </div>
     )
