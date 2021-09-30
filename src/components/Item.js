@@ -10,7 +10,6 @@ const Item = ({product}) =>{
                 <Card.Header>{product.title} - {product.author}</Card.Header>
                 <Card.Body>
                     <Card.Img className="w-25" variant="top" src={product.pictureUrl} alt={product.title} />
-                    <Card.Title>Special title treatment</Card.Title>
                     <Card.Text>$ {product.cost}</Card.Text>
                     <ItemCount stock={product.stock} initial={0}/>
                 </Card.Body>
