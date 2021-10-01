@@ -13,10 +13,10 @@ const ItemList = ({product}) =>{
             {product.length ? (
                 product.map((product) => <Item product={product} />)
             ) : (
-                <Spinner animation="boerder" variant="primary" />
+                <Spinner animation="border" variant="primary" />
             )}
         </div>
-    );
+    )
 }
 
 export default ItemList

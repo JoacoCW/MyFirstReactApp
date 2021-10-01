@@ -1,23 +1,34 @@
-import React, { useEffect, useState } from "react";
-import Data from "./json/JSONProductos.json";
+import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-// en este caso la lista la tenemos guardada en un json (se llama "Data")
+/*import libros from './data/libros.json'*/
+
+const libroX = { id: 6, title: "Gandhi autobiografía", author: "Mahatma Gandhi", stock: 10 , cost: 1300, description: "Lorem Ipsum",  pictureUrl : "https://m.media-amazon.com/images/I/71Mb2yBsBWL._AC_UL320_.jpg", categoria: "Biografía" }
+
+
 const ItemDetailContainer = () => {
-    const [itemDetail,setItemsDetail] = useState([])
+
+    const [item, setItem] = useState(false)
+
+
+
     useEffect(() => {
+
         setTimeout(() => {
             Promise
-                .resolve(Data)
+                .resolve(libroX)
                 .then(response => {
-                    setItemsDetail(response)
+                    setItem(response)
                 })
-        }, 1000)
+        }, 2000)
+
     }, [])
+
     return (
         <div>
             <p>Detalle Item</p>
-            <ItemDetail itemDetail={itemDetail}/>
+            <ItemDetail item={item}/>
         </div>
     );
 }
+
 export default ItemDetailContainer;

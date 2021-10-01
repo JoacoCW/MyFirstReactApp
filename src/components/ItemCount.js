@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const ItemCount = ({stock,initial}) =>{
+const ItemCount = ({stock,initial, onAdd}) =>{
+
     const [value,setValue] = useState(initial)
+
     const add = () => value<stock ? (setValue(value+1)) : console.log("limite de stock");
+
     const substract = () => value>initial ? (setValue(value-1)) : console.log ("limite es 0");
+
+    const confirm = () => {
+        if(stock > 0){
+            onAdd(value)
+        }
+    }
     
     return (
         <div>
@@ -15,7 +24,7 @@ const ItemCount = ({stock,initial}) =>{
                     <button className="btn btn-outline-dark" type="button" onClick={add}>+</button>
                 </div>
             </div>
-            <button className="my-1 px-4 btn btn-outline-dark">Añadir al carrito</button>
+            <button className="my-1 px-4 btn btn-outline-dark" onClick={confirm}>Añadir al carrito</button>
         </div>
     )
 }

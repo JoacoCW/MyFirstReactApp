@@ -1,35 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import 'bootstrap';
 import Componente from './components/Componente';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import Header from './components/Header';
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Joaquín Weiss
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <ItemListContainer />
-      <Componente texto="Tu carro" numero={1}/>
-      <Componente texto="Tu carro" numero={0}/>
-    </div>
+      <Router>
+        <NavBar />
+        <Header />
+        <Switch>
+          <Route path='/' component={ItemListContainer} exact />
+          <Route path='/categoria/:id' component={ItemListContainer} />
+          <Componente texto="Tu carro" numero={1}/>
+          <Componente texto="Tu carro" numero={0}/>
+        </Switch>
+      </Router>
+    
   );
 }
 

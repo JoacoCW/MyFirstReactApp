@@ -1,10 +1,16 @@
-const ItemDetail = ({itemDetail}) => {
+import ItemCount from './ItemCount'
+
+const ItemDetail = ({ product }) => {
     return (
-        <article>
-            <h3>{itemDetail.title}</h3>
-            <img src={itemDetail.pictureUrl} alt="" />
-            <h4>{itemDetail.price}</h4>
+        <article className="item">
+            <h2>{product.title} - {product.author}</h2>
+            <img className="w-25" variant="top" src={product.pictureUrl} alt={product.title} />
+            <h3>${product.cost}</h3>
+            <ItemCount stock={product.stock} initial={0}/>
+            <p>Stock: {product.stock}</p>         
+            <p>{product.description}</p>
         </article>
     );
 }
-export default ItemDetail
+
+export default ItemDetail;
