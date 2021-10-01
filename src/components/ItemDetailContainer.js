@@ -1,34 +1,32 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-/*import libros from './data/libros.json'*/
-
-const libroX = { id: 6, title: "Gandhi autobiografía", author: "Mahatma Gandhi", stock: 10 , cost: 1300, description: "Lorem Ipsum",  pictureUrl : "https://m.media-amazon.com/images/I/71Mb2yBsBWL._AC_UL320_.jpg", categoria: "Biografía" }
+import libros from './data/libros.json'
+import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState(false)
-
-
+    const [product, setProduct] = useState({});
+    const { id: idProduct } = useParams();
 
     useEffect(() => {
+        const getItems = () => {
+        return new Promise((res, rej) => {
+            const buscarProducto = libros.find(
+                (item) => item.id === parseInt(idProduct)
+            );
+            setTimeout(() => {
+                res(buscarProducto);
+                rej('error al traer productos');
+            }, 2000);
+        });
+    };
+        getItems()
+        .then((res) => setProduct(res))
+        .catch((Error) => console.log(Error));
+    }, [idProduct]);
 
-        setTimeout(() => {
-            Promise
-                .resolve(libroX)
-                .then(response => {
-                    setItem(response)
-                })
-        }, 2000)
-
-    }, [])
-
-    return (
-        <div>
-            <p>Detalle Item</p>
-            <ItemDetail item={item}/>
-        </div>
-    );
+    return <ItemDetail product={product}/>;
 }
 
 export default ItemDetailContainer;

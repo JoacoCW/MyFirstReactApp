@@ -6,6 +6,7 @@ import Componente from './components/Componente';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import Header from './components/Header';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/categoria/:id' component={ItemListContainer} />
           <Componente texto="Tu carro" numero={1}/>
           <Componente texto="Tu carro" numero={0}/>
+          <Route path='/categoria/:id' component={ItemDetailContainer} />
         </Switch>
       </Router>
     

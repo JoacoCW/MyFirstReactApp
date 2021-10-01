@@ -48,5 +48,15 @@
         "description": "Lorem Ipsum",
         "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDZ3czC9EF0i_aIHl7FDfIgxYjB5Ke-Tl9KvKCsJwxaYYFk4vHtYJMX7XVtCXXVr9H5W40wA2&usqp=CAc",
         "categoría": "Noficcion"
+    },
+    {
+        "id": 6,
+        "title": "Gandhi autobiografía",
+        "author": "Mahatma Gandhi",
+        "stock": 10,
+        "cost": 1300,
+        "description": "Lorem Ipsum",
+        "pictureUrl": "https://m.media-amazon.com/images/I/71Mb2yBsBWL._AC_UL320_.jpg",
+        "categoria": "Biografía"
     }
 ]
