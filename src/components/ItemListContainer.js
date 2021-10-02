@@ -1,24 +1,34 @@
 import React, { useState, useEffect } from 'react'
 import ItemList from './ItemList'
 import 'bootstrap/dist/css/bootstrap.css';
-import libros from './data/libros.json'
+import libros from './data/libros.json';
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     const [products,setProducts] = useState([])
+    const { id: idCategory } = useParams();
 
     useEffect(() => {
-        const promise = new Promise((res, rej) => {
+        const getItems = () => {
+        return new Promise((res,rej) => {
             setTimeout(() => {
-                res(libros);
+                if (idCategory) {
+                    const filtroCategory = libros.filter(
+                        (item) => item.categoria === idCategory
+                    );
+                    res(filtroCategory);
+                } else {
+                    res(libros);
+                }
+
+                rej('Error al traer productos');
             }, 2000);
-        })
-        promise.then(response =>
-            (setProducts(response)
-        )).catch(error => {
-            console.error('Error', error);
         });
-    }, []);
-    console.log(products);
+    };
+        getItems()
+            .then((res) => setProducts(res))
+            .catch((Error) => console.log(Error));
+    }, [idCategory]);
     
 
     return (

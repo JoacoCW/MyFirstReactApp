@@ -15,11 +15,17 @@ const App = () => {
         <NavBar />
         <Header />
         <Switch>
-          <Route path='/' component={ItemListContainer} exact />
-          <Route path='/categoria/:id' component={ItemListContainer} />
+          <Route exact path='/'>
+            <ItemListContainer />
+          </Route>
+          <Route exact path='/categoria/:id'>
+            <ItemListContainer />
+          </Route>
           <Componente texto="Tu carro" numero={1}/>
           <Componente texto="Tu carro" numero={0}/>
-          <Route path='/categoria/:id' component={ItemDetailContainer} />
+          <Route exact path='/item/:id'>
+            <ItemDetailContainer />
+          </Route>
         </Switch>
       </Router>
     
