@@ -9,7 +9,7 @@ const ItemList = ({product}) =>{
     console.log(product);
     
     return(
-        <div>
+        <div className="text-center">
             {product.length ? (
                 product.map((product) => <Item product={product} />)
             ) : (
