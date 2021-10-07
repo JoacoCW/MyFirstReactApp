@@ -21,11 +21,11 @@ const App = () => {
           <Route exact path='/categoria/:id'>
             <ItemListContainer />
           </Route>
-          <Componente texto="Tu carro" numero={1}/>
-          <Componente texto="Tu carro" numero={0}/>
           <Route exact path='/item/:id'>
             <ItemDetailContainer />
           </Route>
+          <Componente texto="Tu carro" numero={1}/>
+          <Componente texto="Tu carro" numero={0}/>
         </Switch>
       </Router>
     
