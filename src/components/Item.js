@@ -1,6 +1,6 @@
 import React from 'react'
-import ItemCount from './ItemCount'
-import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Card, Button } from 'react-bootstrap';
 
 const Item = ({product}) =>{
 
@@ -11,7 +11,7 @@ const Item = ({product}) =>{
                 <Card.Body>
                     <Card.Img className="w-25" variant="top" src={product.pictureUrl} alt={product.title} />
                     <Card.Text>${product.cost}</Card.Text>
-                    <ItemCount stock={product.stock} initial={0}/>
+                    <Link to="/item/:id"><Button><i class="bi bi-eye-fill"></i></Button></Link>
                 </Card.Body>
                 <Card.Footer className="text-muted">Stock: {product.stock}</Card.Footer>
             </Card>           
