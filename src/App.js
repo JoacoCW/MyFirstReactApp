@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import 'bootstrap';
 import AppRoutes from "./Routes/AppRoutes";
-import {ProviderCustomizado} from "./components/ItemContext";
+import {ProviderCustomizado} from "./components/CartContext";
 
 
 const App = () => {

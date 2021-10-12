@@ -2,12 +2,12 @@ import React from 'react'
 import { useContext } from 'react';
 import './CartWidget.css'
 import {Link} from "react-router-dom";
-import {ItemContext} from "../ItemContext";
+import {CartContext} from "../CartContext";
 import { CartCheckFill } from 'react-bootstrap-icons';
 
 function CartWidget(props) {
 
-    const {contador} = useContext(ItemContext);
+    const {contador} = useContext(CartContext);
 
     return (
         <div  style={{visibility: contador === 0 ? "hidden" : "visible",}} className={'d-flex align-items-center'}>

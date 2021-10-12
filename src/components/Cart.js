@@ -1,10 +1,10 @@
-import {ItemContext} from "./ItemContext";
+import {CartContext} from "./CartContext";
 import {useContext} from "react";
 import {Link} from "react-router-dom";
 
 function Cart(props) {
 
-    const {carrito, setCarrito, setContador, contador} = useContext(ItemContext);
+    const {carrito, setCarrito, setContador, contador} = useContext(CartContext);
 
     const totalCarrito = [0]
     let carritoProductos = []

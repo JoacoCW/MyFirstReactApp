@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 import CartWidget from './CartWidget';
 import {useContext} from "react";
-import ItemContext from "../ItemContext";
+import CartContext from "../CartContext";
 
 const NavBar = (props) => {
 
-    const {contador} = useContext(ItemContext)
+    const {contador} = useContext(CartContext)
 
     return (
 

@@ -1,6 +1,6 @@
 import {createContext, useState} from "react";
-export const ItemContext = createContext()
-const {Provider} = ItemContext
+export const CartContext = createContext()
+const {Provider} = CartContext
 
 export const ProviderCustomizado = ({children}) => {
 
@@ -22,4 +22,4 @@ export const ProviderCustomizado = ({children}) => {
 }
 
 
-export default ItemContext
+export default CartContext

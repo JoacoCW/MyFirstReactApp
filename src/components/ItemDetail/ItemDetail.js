@@ -2,7 +2,7 @@ import React, {Fragment, useContext, useState} from 'react';
 import {Link, useHistory} from "react-router-dom";
 import ItemCount from '../ItemCount';
 import { Spinner } from 'react-bootstrap';
-import {ItemContext} from '../ItemContext';
+import {CartContext} from '../CartContext';
 import './ItemDetail.css'
 
 const ItemDetail = ({ product }) => {
@@ -10,7 +10,7 @@ const ItemDetail = ({ product }) => {
     let history = useHistory();
 
     const [contadorDetail, setContadorDetail] = useState(0);
-    const {removeItem, setCarrito, carrito, setContador, contador} = useContext(ItemContext);
+    const {removeItem, setCarrito, carrito, setContador, contador} = useContext(CartContext);
 
     const handleClick = (cantidad) => {
         setContadorDetail(cantidad)
