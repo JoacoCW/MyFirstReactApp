@@ -13,7 +13,7 @@ const Item = ({product}) =>{
                     </h5>
                     <li className="list-group-item m-2">Stock: {product.stock}</li>
                     <li className="list-group-item m-2">$ {product.price}</li>
-                    <Link to={`/products/${product.id}`} className="btn btn-primary">
+                    <Link to={`/item/${product.id}`} className="btn btn-primary">
                         Ver más
                     </Link>
                 </div>

@@ -5,6 +5,10 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import ItemDetailContainer from "../components/ItemDetailContainer";
 import Cart from '../components/Cart';
 import Header from '../components/Header';
+import Novela from '../components/Categorías/Novela'
+import Ensayo from '../components/Categorías/Ensayo'
+import Biografia from '../components/Categorías/Biografia'
+import NoFiccion from '../components/Categorías/NoFiccion'
 
 function AppRoutes() {
     return (
@@ -13,11 +17,18 @@ function AppRoutes() {
                 <NavBar/>
                 <Header />
                 <Switch>
-                    <Route path='/' exact component={ItemListContainer} />
-                    <Route path='/products/:id' exact component={ItemDetailContainer} />
-                    <Route path='/cart' exact component={Cart} />
-                    <Route exact path='/categoria/:id'><ItemListContainer /></Route>
-                    <Route exact path='/item/:id'><ItemDetailContainer /></Route>
+                  <Route exact path='/'>
+                    <ItemListContainer />
+                  </Route>
+                  <Route exact path='/categoria/:id'>
+                    <ItemListContainer />
+                  </Route>
+                  <Route exact path='/item/:id'>
+                    <ItemDetailContainer />
+                  </Route>
+                  <Route exact path='/cart'>
+                    <Cart />
+                  </Route>
                 </Switch>
             </Router>
         </div>
@@ -25,23 +36,10 @@ function AppRoutes() {
 }
 
 export default AppRoutes;
-/*
-return (
-      <Router>
-        <NavBar />
-        <Header />
-        <Switch>
-          <Route exact path='/'>
-            <ItemListContainer />
-          </Route>
-          <Route exact path='/categoria/:id'>
-            <ItemListContainer />
-          </Route>
-          <Route exact path='/item/:id'>
-            <ItemDetailContainer />
-          </Route>
-        </Switch>
-      </Router>
-    
-  );
-}*/
+
+                    /*
+                    <Route path='/Novela' exact component={Novela} />
+                    <Route path='/Ensayo' exact component={Ensayo} />
+                    <Route path='/Biografia' exact component={Biografia} />
+                    <Route path='/NoFiccion' exact component={NoFiccion} />
+                    */
