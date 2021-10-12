@@ -4,19 +4,19 @@
         "title": "Papillon",
         "author": "Henri Charriere",
         "stock": 10,
-        "cost": 1500,
+        "price": 1500,
         "description": "Lorem Ipsum",
-        "pictureUrl": "https://covers.alibrate.com/b/59872eaecba2bce50c1f25f5/4bffcfc6-de0b-4dd9-b823-f67e573bafa4/medium",
+        "image": "https://covers.alibrate.com/b/59872eaecba2bce50c1f25f5/4bffcfc6-de0b-4dd9-b823-f67e573bafa4/medium",
         "categoria": "Novela"
     },
     {
         "id": 1,
         "title": "Los tres mosqueteros",
         "author": "Alexandre Dumas",
-        "stock": 2,
-        "cost": 1000,
+        "stock": 3,
+        "price": 1000,
         "description": "Lorem Ipsum",
-        "pictureUrl": "https://i.pinimg.com/474x/90/51/28/905128d0d5fc2a4740cbb3332bca5828--book-show-book-jacket.jpg",
+        "image": "https://i.pinimg.com/474x/90/51/28/905128d0d5fc2a4740cbb3332bca5828--book-show-book-jacket.jpg",
         "categoria": "Novela"
     },
     {
@@ -24,9 +24,9 @@
         "title": "The Jedi path",
         "author": "Star Wars",
         "stock": 15,
-        "cost": 1250,
+        "price": 1250,
         "description": "Lorem Ipsum",
-        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtUxsoKTWjADFj-hCFTaWgUpwytQ8Xivj74hnEeYojx4PyKvcduRQ-WDsefJtESsTJ0mw2S6Fd&usqp=CAc",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtUxsoKTWjADFj-hCFTaWgUpwytQ8Xivj74hnEeYojx4PyKvcduRQ-WDsefJtESsTJ0mw2S6Fd&usqp=CAc",
         "categoria": "Novela"
     },
     {
@@ -34,9 +34,9 @@
         "title": "Ciberdefensa",
         "author": "Sol Gastaldi & Leandro Ocón",
         "stock": 19,
-        "cost": 1100,
+        "price": 1100,
         "description": "Lorem Ipsum",
-        "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_669033-MLA45273339061_032021-O.webp",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_669033-MLA45273339061_032021-O.webp",
         "categoria": "Ensayo"
     },
     {
@@ -44,9 +44,9 @@
         "title": "Operación masacre",
         "author": "Rodolfo Walsh",
         "stock": 18,
-        "cost": 800,
+        "price": 800,
         "description": "Lorem Ipsum",
-        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDZ3czC9EF0i_aIHl7FDfIgxYjB5Ke-Tl9KvKCsJwxaYYFk4vHtYJMX7XVtCXXVr9H5W40wA2&usqp=CAc",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDZ3czC9EF0i_aIHl7FDfIgxYjB5Ke-Tl9KvKCsJwxaYYFk4vHtYJMX7XVtCXXVr9H5W40wA2&usqp=CAc",
         "categoria": "Noficcion"
     },
     {
@@ -54,9 +54,9 @@
         "title": "Gandhi autobiografía",
         "author": "Mahatma Gandhi",
         "stock": 10,
-        "cost": 1300,
+        "price": 1300,
         "description": "Lorem Ipsum",
-        "pictureUrl": "https://m.media-amazon.com/images/I/71Mb2yBsBWL._AC_UL320_.jpg",
+        "image": "https://m.media-amazon.com/images/I/71Mb2yBsBWL._AC_UL320_.jpg",
         "categoria": "Biografia"
     }
 ]

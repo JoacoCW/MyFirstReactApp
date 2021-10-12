@@ -1,8 +1,7 @@
 import React from 'react';
-import Item from './Item';
+import Item from './Item/Item';
 import { Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-/*import Row from 'react-bootstrap/Row';*/
 
 const ItemList = ({product}) =>{
     
@@ -13,7 +12,7 @@ const ItemList = ({product}) =>{
             {product.length ? (
                 product.map((product) => <Item product={product} />)
             ) : (
-                <Spinner animation="border" variant="primary" />
+                <Spinner className="my-4" animation="border" variant="primary" />
             )}
         </div>
     )

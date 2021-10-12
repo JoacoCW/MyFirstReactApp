@@ -1,31 +1,25 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const ItemCount = ({stock,initial, onAdd}) =>{
 
     const [value,setValue] = useState(initial)
 
-    const add = () => value<stock ? (setValue(value+1)) : console.log("limite de stock");
+    const add = (value) => value < stock ? (setValue(value+1)) : console.log("limite de stock");
 
-    const substract = () => value>initial ? (setValue(value-1)) : console.log ("limite es 0");
+    const substract = (value) => value <= stock && value > initial ? (setValue(value-1)) : console.log ("limite es 0");
 
-    const confirm = () => {
-        if(stock > 0){
-            onAdd(value)
-        }
-    }
-    
     return (
-        <div>
+        <Fragment>
             <div className="my-2">
                 <div className="btn-group">
-                    <button className="btn btn-outline-dark" type="button" onClick={substract}>-</button>
+                    <button className="btn btn-outline-dark" type="button" onClick={() => substract(value)}>-</button>
                     <h5 className="mx-5">{value}</h5>
-                    <button className="btn btn-outline-dark" type="button" onClick={add}>+</button>
+                    <button className="btn btn-outline-dark" type="button" onClick={() => add(value)}>+</button>
                 </div>
             </div>
-            <button className="my-1 px-4 btn btn-outline-dark" onClick={confirm}>Añadir al carrito</button>
-        </div>
+            <button className="my-1 px-4 btn btn-outline-dark" type="button" onClick={() => onAdd(value)}>Añadir al carrito</button>
+        </Fragment>
     )
 }
 

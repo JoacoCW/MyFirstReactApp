@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import ItemList from './ItemList'
+import ItemList from '../ItemList'
 import 'bootstrap/dist/css/bootstrap.css';
-import libros from './data/libros.json';
+import './ItemListContainer.css'
+import libros from '../data/libros.json';
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -33,10 +34,12 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            <ItemList product={products} />
+            <ul className="grilla">
+                <ItemList product={products} />
+            </ul>
         </div>
     ) 
 
 }
 
-export default ItemListContainer
+export default ItemListContainer 

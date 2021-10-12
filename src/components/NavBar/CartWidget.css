@@ -1,0 +1,9 @@
+.cartIcon{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    text-decoration: none;
+}
+.cartIcon:hover{
+    color: rgb(119, 118, 115);
+}
