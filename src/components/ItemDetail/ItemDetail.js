@@ -66,14 +66,14 @@ const ItemDetail = ({ product }) => {
                     </div>
                     <div className="description-container">
                         <h1>{product.title}</h1>
-                        <h5>Description: {product.description}</h5>
-                        <h5>Price: {product.price}</h5>
+                        <h5>Descripción: {product.description}</h5>
+                        <h5>Precio: {product.price}</h5>
                         {contadorDetail === 0 &&
                         <ItemCount stock={product.stock} initial={0} onAdd={onAdd}/>
                         }
                         {contadorDetail !== 0 &&
                         <Fragment>
-                            <h5>Count bought: {contadorDetail}</h5>
+                            <h5>Cantidad seleccionada: {contadorDetail}</h5>
                             <Link className="btn btn-success m-3" to={pathCart}>Terminar mi compra</Link>
                         </Fragment>
                         }
@@ -81,7 +81,7 @@ const ItemDetail = ({ product }) => {
                     </div>
                 </div>
                 <button className={'btn btn-primary m-3'} onClick={() => history.goBack()}>
-                    Go Back
+                    Volver
                 </button>
                 <Link className="btn btn-primary m-3" to={pathDefault}>Home</Link>
             </div>

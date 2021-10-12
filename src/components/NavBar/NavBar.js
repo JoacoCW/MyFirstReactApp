@@ -38,10 +38,10 @@ const NavBar = (props) => {
                                 Categorías
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><NavLink className="dropdown-item fontSize" to={'/Novela'}>Novelas</NavLink></li>
-                                <li><NavLink className="dropdown-item fontSize" to={'/Ensayo'}>Ensayo</NavLink></li>
-                                <li><NavLink className="dropdown-item fontSize" to={'/Biografia'}>Biografías</NavLink></li>
-                                <li><NavLink className="dropdown-item fontSize" to={'/NoFiccion'}>No Ficción</NavLink></li>
+                                <li><NavLink className="dropdown-item fontSize" to={'/categoria/Novela'}>Novelas</NavLink></li>
+                                <li><NavLink className="dropdown-item fontSize" to={'/categoria/Ensayo'}>Ensayo</NavLink></li>
+                                <li><NavLink className="dropdown-item fontSize" to={'/categoria/Biografia'}>Biografías</NavLink></li>
+                                <li><NavLink className="dropdown-item fontSize" to={'/categoria/Noficcion'}>No Ficción</NavLink></li>
                             </ul>
                         </li>
                     </ul>
