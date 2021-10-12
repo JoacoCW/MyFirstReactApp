@@ -5,10 +5,6 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import ItemDetailContainer from "../components/ItemDetailContainer";
 import Cart from '../components/Cart';
 import Header from '../components/Header';
-import Novela from '../components/Categorías/Novela'
-import Ensayo from '../components/Categorías/Ensayo'
-import Biografia from '../components/Categorías/Biografia'
-import NoFiccion from '../components/Categorías/NoFiccion'
 
 function AppRoutes() {
     return (
@@ -36,10 +32,3 @@ function AppRoutes() {
 }
 
 export default AppRoutes;
-
-                    /*
-                    <Route path='/Novela' exact component={Novela} />
-                    <Route path='/Ensayo' exact component={Ensayo} />
-                    <Route path='/Biografia' exact component={Biografia} />
-                    <Route path='/NoFiccion' exact component={NoFiccion} />
-                    */
