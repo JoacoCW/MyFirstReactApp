@@ -6,6 +6,7 @@ export const ProviderCustomizado = ({children}) => {
 
     const [carrito, setCarrito] = useState([]);
     const [contador, setContador] = useState(0);
+    
 
     const valorDelContexto = {
         carrito,

@@ -48,7 +48,7 @@ function Cart(props) {
                             )
                         })
                     }
-                    {carrito.length > 0 && <button className={'btn btn-warning m-2'} onClick={removeAll}>BORRAR TODO</button>}
+                    {carrito.length > 0 && <button className={'btn btn-danger m-2'} onClick={removeAll}>BORRAR TODO</button>}
                 </ul>
                 <h3>Total: ${totalCarrito.reduce((prev, next) => prev + next)}</h3>
             </div>
