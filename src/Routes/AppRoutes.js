@@ -5,6 +5,7 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import ItemDetailContainer from "../components/ItemDetailContainer";
 import Cart from '../components/Cart';
 import Header from '../components/Header';
+/*import Noficcion from '../components/Noficcion'*/
 
 function AppRoutes() {
     return (
