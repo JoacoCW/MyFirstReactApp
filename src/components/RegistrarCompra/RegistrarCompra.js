@@ -1,6 +1,6 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {CartContext} from "../CartContext";
-import {Button, Modal} from "react-bootstrap";
+import {Modal} from "react-bootstrap";
 import {firestore} from "../../firebase/index";
 import swal from 'sweetalert';
 import {Formik} from 'formik';
@@ -9,7 +9,7 @@ import * as Yup from "yup";
 
 
 function RegistrarCompra(props) {
-    const {carrito, setCarrito, setContador, contador, handleClose, handleShow, show} = useContext(CartContext);
+    const {carrito, setCarrito, setContador, contador, handleClose, show} = useContext(CartContext);
 
     async function cargarRegistroCompra(valores) {
 
