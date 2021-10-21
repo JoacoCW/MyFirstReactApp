@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import {CartContext} from "../CartContext";
 import {Button, Modal} from "react-bootstrap";
-import {firestore} from "../../firebase";
+import {firestore} from "../../firebase/index";
 import swal from 'sweetalert';
 import {Formik} from 'formik';
 import Buyer from "../Buyer/Buyer";
