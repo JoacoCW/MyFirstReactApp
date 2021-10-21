@@ -10,10 +10,10 @@ function Buyer({errors}) {
                 <div className={'d-flex flex-column m-3'}>
                     <h3 className={'text-center'}>Registro de compra</h3>
                     <label>Nombre: </label>
-                    <Field name={'nombre'} type={'text'} />
+                    <Field name={'name'} type={'text'} />
                     <small>{errors.nombre}</small>
                     <label>Telefono: </label>
-                    <Field name={'telefono'} type={'number'} />
+                    <Field name={'phone'} type={'number'} />
                     <small>{errors.telefono}</small>
                     <label>Email: </label>
                     <Field name={'email'} type={'email'} />
