@@ -14,11 +14,11 @@ function RegistrarCompra(props) {
     async function cargarRegistroCompra(valores) {
 
         const db = firestore
-        const coleccion = await db.collection("ordenes")
+        const coleccion = await db.collection("Buyer")
         const nueva_orden = {
             buyer: {
-                nombre: valores.nombre,
-                telefono: valores.telefono,
+                name: valores.name,
+                phone: valores.phone,
                 email: valores.email
             },
             items: carrito,
@@ -40,8 +40,8 @@ function RegistrarCompra(props) {
     }
 
     const ErrorSchema = Yup.object().shape({
-        nombre: Yup.string().required("Nombre es requerido").min(3, "Nombre muy corto").max(20, "Nombre muy largo"),
-        telefono: Yup.number().required("Telefono requerido").positive().integer(),
+        name: Yup.string().required("Nombre es requerido").min(3, "Nombre muy corto").max(20, "Nombre muy largo"),
+        phone: Yup.number().required("Telefono requerido").positive().integer(),
         email: Yup.string().email("Email invalido").required("Email es requerido")
     })
 
@@ -49,8 +49,8 @@ function RegistrarCompra(props) {
 
         <Modal show={show} onHide={handleClose}>
             <Formik initialValues={{
-                nombre: "",
-                telefono: "",
+                name: "",
+                phone: "",
                 email: ""
             }} onSubmit={(values => {
                 cargarRegistroCompra(values)
