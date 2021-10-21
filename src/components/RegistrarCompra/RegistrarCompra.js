@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {ItemContext} from "../context/ItemContext";
+import {CartContext} from "../CartContext";
 import {Button, Modal} from "react-bootstrap";
 import {firestore} from "../../firebase";
 import swal from 'sweetalert';
@@ -9,7 +9,7 @@ import * as Yup from "yup";
 
 
 function RegistrarCompra(props) {
-    const {carrito, setCarrito, setContador, contador, handleClose, handleShow, show} = useContext(ItemContext);
+    const {carrito, setCarrito, setContador, contador, handleClose, handleShow, show} = useContext(CartContext);
 
     async function cargarRegistroCompra(valores) {
 
