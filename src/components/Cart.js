@@ -1,10 +1,12 @@
 import {CartContext} from "./CartContext";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import {Link} from "react-router-dom";
+import {Button} from "react-bootstrap";
+import RegistrarCompra from "../RegistrarCompra/RegistrarCompra";
 
 function Cart(props) {
 
-    const {carrito, setCarrito, setContador, contador} = useContext(CartContext);
+    const {carrito, setCarrito, setContador, contador, handleClose, handleShow, show} = useContext(CartContext);
 
     const totalCarrito = [0]
     let carritoProductos = []
@@ -13,7 +15,7 @@ function Cart(props) {
         carritoProductos = carritoProductos.filter(producto => producto.id !== item.id)
         setCarrito(carritoProductos)
         let counter = 0
-        carritoProductos.map(item2=>{
+        carritoProductos.map(item2 => {
             counter += item2.cantidad
         })
         setContador(counter)
@@ -24,7 +26,7 @@ function Cart(props) {
         setContador(0)
     }
 
-    if (contador){
+    if (contador) {
         return (
             <div>
                 <h1> CARRITO </h1>
@@ -51,6 +53,10 @@ function Cart(props) {
                     {carrito.length > 0 && <button className={'btn btn-danger m-2'} onClick={removeAll}>BORRAR TODO</button>}
                 </ul>
                 <h3>Total: ${totalCarrito.reduce((prev, next) => prev + next)}</h3>
+                <Button variant="primary" onClick={handleShow} className={'m-3'}>
+                    Finalizar Compra
+                </Button>
+                <RegistrarCompra/>
             </div>
         );
     }else{
