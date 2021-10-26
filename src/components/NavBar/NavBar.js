@@ -8,7 +8,7 @@ import CartContext from "../CartContext";
 
 const NavBar = (props) => {
 
-    const {contador} = useContext(CartContext)
+    /*const {contador} = useContext(CartContext)*/
 
     return (
 
@@ -26,10 +26,10 @@ const NavBar = (props) => {
                             <NavLink activeClassName="active" className="nav-link fontSize" to={'/'}>Inicio</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link fontSize" aria-current="page" to={'/bestSellers'}>Más vendidos</NavLink>
+                            <a activeClassName="active" className="nav-link fontSize" aria-current="page" href={'https://github.com/JoacoCW/'}>GitHub</a>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName="active" className="nav-link fontSize" to={'/nuevos'}>Novedades</NavLink>
+                            <a activeClassName="active" className="nav-link fontSize" href={'https://www.linkedin.com/in/joaquin-weiss-b3620076/'}>LinkedIn</a>
                         </li>
 
                         <li className="nav-item dropdown">

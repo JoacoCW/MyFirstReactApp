@@ -1,5 +1,5 @@
 import {CartContext} from "./CartContext";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 import RegistrarCompra from "./RegistrarCompra/RegistrarCompra";

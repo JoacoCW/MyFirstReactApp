@@ -11,12 +11,6 @@ const firebaseConfig = {
     measurementId: "G-SRP2XL19TL"
 };
 
-// export function getFirebase() {
-//     return app;
-// }
-// export function getFirestore() {
-//     return firebase.firestore(app);
-// }
 
 const app = firebase.initializeApp(firebaseConfig);
 
