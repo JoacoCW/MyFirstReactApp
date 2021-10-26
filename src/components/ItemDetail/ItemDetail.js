@@ -10,7 +10,7 @@ const ItemDetail = ({ product }) => {
     let history = useHistory();
 
     const [contadorDetail, setContadorDetail] = useState(0);
-    const {removeItem, setCarrito, carrito, setContador, contador} = useContext(CartContext);
+    const {setCarrito, carrito, setContador, contador} = useContext(CartContext);
 
     const handleClick = (cantidad) => {
         setContadorDetail(cantidad)

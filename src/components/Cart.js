@@ -6,7 +6,7 @@ import RegistrarCompra from "./RegistrarCompra/RegistrarCompra";
 
 function Cart(props) {
 
-    const {carrito, setCarrito, setContador, contador, handleClose, handleShow, show} = useContext(CartContext);
+    const {carrito, setCarrito, setContador, contador, handleShow} = useContext(CartContext);
 
     const totalCarrito = [0]
     let carritoProductos = []
