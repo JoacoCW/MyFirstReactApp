@@ -3,12 +3,8 @@ import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 import CartWidget from './CartWidget';
-import {useContext} from "react";
-import CartContext from "../CartContext";
 
 const NavBar = (props) => {
-
-    /*const {contador} = useContext(CartContext)*/
 
     return (
 
